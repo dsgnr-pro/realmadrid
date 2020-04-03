@@ -1,0 +1,126 @@
+.button {
+  @include a-reset;
+  border: none;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 4px $yellow;
+  }
+}
+
+.button--large {
+  width: 100%;
+  max-width: 480px;
+  padding: 13px 16px;
+  border-radius: 24px;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.button--plain {
+  background-color: $light-grey;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #dbdbdb;
+  }
+}
+
+.button--go {
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url("../img/icon-drop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+  }
+}
+
+.button--yellow {
+  background-color: $yellow;
+}
+
+.button--pink {
+  background-color: $gold;
+  color: white;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #d28e4f;
+  }
+}
+
+.button--context {
+  padding: 13px 16px;
+  border-radius: 24px;
+}
+
+.button__less {
+  display: none;
+}
+
+.button--active .button__more {
+  display: none;
+}
+
+.button--active .button__less {
+  display: block;
+}
+@media (max-width: $mobile-width-only) {
+  .button--go {
+    justify-content: center;
+    background-color: $blue;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  .button__go-text {
+    display: none;
+  }
+}
+@media (min-width: $tablet-width) {
+  .button--go {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    color: $blue;
+
+    &::after {
+      background-image: url("../img/icon-drop--black.svg");
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  .button__go-text {
+    margin-right: 8px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .button--go {
+    transition: all 0.3s;
+
+    &::after {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:hover::after {
+      transition: all 0.3s;
+      transform: rotate(-90deg) translateY(4px);
+    }
+  }
+}

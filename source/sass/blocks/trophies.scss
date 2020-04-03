@@ -1,0 +1,184 @@
+.trophies__main-wrap {
+  padding: 0 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.trophies__mini-list {
+  @include list-reset;
+}
+
+.trophies__list {
+  @include list-reset;
+}
+
+.trophies__year-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.trophies__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.trophies__heading-player {
+  margin-top: 0px;
+}
+
+.trophies__mini-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.trophies__year-list {
+  display: flex;
+  color: $gold;
+}
+
+.trophies__year-list--mini {
+  width: 60%;
+}
+
+.trophies__year-item {
+  margin: 8px;
+}
+
+.trophies__mini-item {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.trophies__qty {
+  color: white;
+  border-radius: 50%;
+  background-color: $gold;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.trophies__img-wrap {
+  position: relative;
+  margin-right: 16px;
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.trophies__img {
+  object-fit: cover;
+  height: auto;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  transition: all 0.3s;
+  width: 100%;
+  object-position: top;
+}
+
+.trophies__img-preview {
+  @include lazy-animation;
+  padding-bottom: 118%;
+}
+
+.trophies__logo {
+  position: absolute;
+  right: -40px;
+  top: 0;
+  opacity: 0.1;
+  display: none;
+}
+
+.trophies__main {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.trophies__title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.trophies__qty--main {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+}
+
+.trophies__title {
+  line-height: 1.2;
+}
+
+.trophies__text {
+  padding: 0 16px;
+}
+
+.trophies__button {
+  margin-top: 16px;
+}
+
+.trophies__item {
+  padding-bottom: 16px;
+  border-bottom: 2px solid $light-grey;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+}
+
+.trophies__slider {
+    // min-height: 0px;
+    // min-height: 246px;
+}
+
+.trophies__year-list--big {
+  padding: 8px;
+  border-bottom: 2px solid $light-grey;
+  border-top: 2px solid $light-grey;
+  margin-top: 8px;
+  justify-content: center;
+}
+@media (min-width: $tablet-width) {
+  .trophies__img-wrap {
+    width: 25%;
+  }
+
+  .trophies__main {
+    justify-content: center;
+  }
+
+  .trophies__title {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 25%;
+  }
+}
+@media (min-width: $desktop-width) {
+  .trophies__mini-list--header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .trophies__mini-list--header .trophies__mini-item {
+    margin-bottom: 0;
+    width: auto;
+  }
+
+  .trophies__qty {
+    transition: all 0.3s;
+  }
+
+  .trophies__mini-list--header .trophies__mini-item {
+    &:hover .trophies__qty {
+      transform: translateX(-2px);
+    }
+  }
+}

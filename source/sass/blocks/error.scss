@@ -1,0 +1,48 @@
+.error__body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.error__img-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+
+  &::after,
+  &::before {
+    content: "4";
+    display: block;
+    font-size: 80px;
+    color: $light-grey;
+    font-weight: 600;
+  }
+}
+
+.error__button {
+  margin: 16px auto;
+  max-width: 240px;
+}
+@media (max-width: $mobile-width-only) {
+  .error__img {
+    width: 50%;
+    flex-shrink: 0;
+    height: auto;
+    object-fit: contain;
+    object-position: bottom;
+  }
+}
+@media (min-width: $tablet-width) {
+
+  .error__img-wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    &::after,
+    &::before {
+      font-size: 240px;
+    }
+  }
+}

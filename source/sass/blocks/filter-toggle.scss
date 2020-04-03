@@ -1,0 +1,72 @@
+.filter-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $gold;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.filter-toggle__element {
+  width: 18px;
+  height: 1px;
+  background-color: white;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border: 1px solid white;
+    top: -2px;
+    background-color: $gold;
+  }
+}
+
+.filter-toggle__element:nth-child(1) {
+  &:after {
+    transition: all 0.3s;
+    transform: translateX(10px);
+  }
+}
+
+.filter-toggle__element:nth-child(2) {
+  &:after {
+    transition: all 0.3s;
+    transform: translateX(7px);
+  }
+}
+
+.filter-toggle__element:nth-child(3) {
+  &:after {
+    transition: all 0.3s;
+    transform: translateX(2px);
+  }
+}
+
+.filter-toggle--active .filter-toggle__element:nth-child(1) {
+  &:after {
+    transition: all 0.3s;
+    transform: translateX(2px);
+  }
+}
+
+.filter-toggle--active .filter-toggle__element:nth-child(2) {
+  &:after {
+    transition: all 0.3s;
+    transform: translateX(9px);
+  }
+}
+
+.filter-toggle--active .filter-toggle__element:nth-child(3) {
+  &:after {
+    transition: all 0.3s;
+    transform: translateX(13px);
+  }
+}

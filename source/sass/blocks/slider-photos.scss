@@ -1,0 +1,142 @@
+.slider-photos {
+
+}
+
+.slider-photos__img-wrap {
+  height: 100%;
+  position: relative;
+}
+
+.slider-photos__img {
+  object-fit: cover;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  transition: all 0.3s;
+  height: 100%;
+  width: 100%;
+  object-position: top;
+}
+
+.slider-photos__img-preview {
+  @include lazy-animation;
+  padding-bottom: 70%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  height: 100%;
+}
+//graceful-loading//
+
+.slider-photos {
+  visibility: hidden;
+  opacity: 0;
+  background-color: $light-grey;
+}
+
+.slider-photos.slick-initialized {
+  visibility: visible;
+  opacity: 1;
+}
+
+.slider-photos .slider-photos__item {
+  display: none;
+}
+
+.slider-photos .slider-photos__item:first-child {
+  display: block;
+  visibility: hidden;
+}
+
+.slider-photos .slick-initialized .slider-photos__item {
+  display: block;
+  visibility: visible!important;
+}
+//graceful-loading//
+
+.slider-photos .slick-dots {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+  margin: 16px auto 0;
+  position: absolute;
+  width: 100%;
+  bottom: 16px;
+}
+
+.slider-photos .slick-dots li {
+  background-color: $grey;
+  opacity: 0.5;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.slider-photos .slick-dots li.slick-active {
+  background-color: $gold;
+}
+
+.slider-photos .slick-dots li button {
+  display: none;
+}
+
+@media (max-width: $mobile-width-only) {
+  .slider-photos--news {
+    margin: 0 -16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider-photos--news {
+    margin: 32px -32px;
+  }
+  .slider-photos {
+    &:hover .slick-arrow {
+      opacity: 0.5;
+      transition: 0.3s;
+    }
+  }
+
+  .slider-photos .slick-arrow {
+    position: absolute;
+    bottom: 32px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $black;
+    background-image: url("../img/icon-drop.svg");
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: center;
+    z-index: 100;
+    border: none;
+    opacity: 0.2;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+      transition: 0.3s;
+    }
+  }
+
+  .slider-photos__item {
+    &::before {
+      border-radius: 8px;
+    }
+  }
+
+  .slider-photos .slick-next {
+    right: 32px;
+    transform: rotate(-90deg);
+  }
+
+  .slider-photos .slick-prev {
+    right: 112px;
+    transform: rotate(90deg);
+  }
+}

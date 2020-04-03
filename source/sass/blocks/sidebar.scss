@@ -1,0 +1,18 @@
+.sidebar {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.sidebar .calendar__item,
+.sidebar .players__item,
+.sidebar .table__tr {
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .sidebar--pc-only {
+    display: none;
+  }
+}

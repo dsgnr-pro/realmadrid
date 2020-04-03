@@ -1,0 +1,218 @@
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav__profile {
+  @include a-reset;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.main-nav__name {
+  margin-right: 12px;
+  max-width: 80px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.main-nav__profile img {
+  transition: none;
+}
+
+.main-nav__profile {
+  &:hover .main-nav__name {
+    opacity: 0.5;
+  }
+}
+
+.main-nav__profile--message {
+  &::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: $gold;
+    right: -8px;
+    top: -4px;
+  }
+}
+
+.main-nav__name {
+  margin-right: 8px;
+}
+
+.main-nav__profile-img {
+  width: 28px;
+  height: 28px;
+}
+
+.main-nav__profile-img img {
+  border-radius: 50%;
+  display: none;
+}
+
+.main-nav__profile {
+  display: flex;
+}
+
+.main-nav__social {
+  display: none;
+}
+
+.main-nav__site {
+  display: none;
+}
+
+.main-nav__avatar {
+  border-radius: 50%;
+}
+@media (max-width: $tablet-width-only) {
+  .main-nav__toggle {
+    @include button-reset;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    width: 20px;
+    transition: 0.1s;
+    transition-delay: 0.1s;
+    top: -6px;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      left: 0;
+      width: 100%;
+    }
+
+    &::before {
+      top: 6px;
+      transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+
+    &::after {
+      top: 12px;
+      transform-origin: center;
+      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+  }
+
+  .main-nav__toggle--active {
+    background-color: transparent;
+    transition-delay: 0.2s;
+
+    &::before {
+      top: 0;
+      transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0.2s 1s;
+      transform: translate3d(0, 6px, 0) rotate(-45deg);
+      background-color: $light-blue;
+    }
+
+    &::after {
+      top: 0;
+      transform-origin: center;
+      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0.2s 1s;
+      transform: translate3d(0, 6px, 0) rotate(45deg);
+      background-color: $light-blue;
+    }
+  }
+
+  .main-nav__profile {
+    margin-right: 16px;
+  }
+
+  .main-nav__wrap {
+    background-color: $blue;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 56px;
+    z-index: 150;
+    display: none;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background-image: url("../img/white-emblem-bottom.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 74px;
+      height: 56px;
+      left: 7px;
+      top: 0;
+      z-index: 0;
+    }
+  }
+
+  .main-nav__social {
+    display: block;
+    margin: 16px 0;
+  }
+
+  .main-nav__site {
+    display: block;
+    margin-bottom: 16px;
+    text-align: center;
+    color: $light-blue;
+    font-size: 12px;
+    font-family: "Helvetica";
+  }
+}
+@media (min-width: $tablet-width) {
+  .main-nav__name {
+    max-width: 120px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .main-nav {
+    justify-content: space-between;
+    position: relative;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+
+  .main-nav__wrap {
+    width: 100%;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__profile {
+    align-self: flex-end;
+    margin-bottom: 24px;
+  }
+
+  .main-nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+  }
+
+  .main-nav__wrap {
+    width: 80%;
+  }
+
+  .main-nav__profile {
+    margin-bottom: 0;
+    align-self: center;
+  }
+}

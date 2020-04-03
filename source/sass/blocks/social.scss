@@ -1,0 +1,34 @@
+.social__list {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+}
+
+.social__item {
+  margin: 0 8px;
+}
+
+.social__link {
+  @include a-reset;
+  width: 32px;
+  height: 32px;
+  display: block;
+  transition: all 0.3s;
+
+  &:active,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.social__icon {
+  width: 32px;
+  height: 32px;
+}
+@media (min-width: $desktop-width) {
+  .social__link {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

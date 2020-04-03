@@ -1,0 +1,279 @@
+.page-footer {
+  background-color: white;
+  padding: 24px 0;
+  z-index: 50;
+  position: relative;
+}
+
+.page-footer__btn {
+  padding: 16px;
+}
+
+.page-footer__label {
+  text-align: center;
+  color: $grey;
+  margin-bottom: 8px;
+}
+
+.page-footer__bold-name {
+  font-weight: 600;
+}
+
+.page-footer__about {
+  background-color: white;
+}
+
+.page-footer__coded {
+  text-align: center;
+}
+
+.page-footer__coded a {
+  color: $pink;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.page-footer__social {
+  margin: 0 -16px;
+  padding: 16px 0;
+  border-top: 1px solid $light-grey;
+  border-bottom: 1px solid $light-grey;
+}
+
+.page-footer__logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.page-footer__partner {
+  display: flex;
+  justify-content: center;
+  max-width: 240px;
+}
+
+.page-footer__partner-img--fondo {
+  height: 64px;
+}
+
+.page-footer__partner {
+  margin-bottom: 24px;
+}
+
+.page-footer__subscribe-label {
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: white;
+  z-index: 50;
+}
+
+.page-footer__match {
+  z-index: 50;
+  color: white;
+}
+
+.page-footer__match .lazyloaded {
+  background: transparent;
+}
+
+.page-footer__subscribe {
+  padding: 16px;
+  border: 1px solid $light-grey;
+  margin-bottom: 24px;
+  max-width: 384px;
+  width: 100%;
+  border-radius: 8px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("../img/footer-watch.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  @include overlay;
+}
+
+.page-footer__subscribe .page-main__btn-wrapper {
+  z-index: 50;
+}
+
+.page-footer__logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.page-footer__logo-img {
+  opacity: 0.2;
+}
+
+.page-footer__logo-img--colored {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -3px;
+  transition: all 0.3s;
+}
+
+.page-footer__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-footer__about {
+  text-align: center;
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: $tablet-width-only) {
+  .page-footer__social {
+    &:first-child {
+      margin-bottom: -1px;
+    }
+  }
+
+  .page-footer__about {
+    flex-direction: column;
+  }
+
+  .page-footer__social-label {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .page-footer__logo-wrap {
+    display: block;
+  }
+
+  .page-footer__links {
+    display: none;
+  }
+
+  .page-footer__partner {
+    width: 45%;
+    padding: 16px;
+  }
+}
+@media (min-width: $tablet-width) {
+  .page-footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    width: 100%;
+    border-top: 1px solid $light-grey;
+    margin-top: 16px;
+  }
+
+  .page-footer__link {
+    @include a-reset;
+    font-size: 16px;
+    margin-bottom: 16px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .page-footer__links-list {
+    @include list-reset;
+    position: relative;
+  }
+
+  .page-footer__partner {
+    max-width: 20%;
+    width: auto;
+  }
+}
+@media (min-width: $desktop-width) {
+  .page-footer__logo {
+    position: relative;
+    background-color: $light-grey;
+    padding: 24px;
+    width: 100%;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-footer__social {
+    display: flex;
+    align-items: center;
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .page-footer__logo-wrap {
+    margin-bottom: 40px;
+  }
+
+  .page-footer__bottom {
+    justify-content: space-around;
+    border-bottom: 1px solid $light-grey;
+  }
+
+  .page-footer__top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .page-footer__logos {
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+    margin-right: 32px;
+    height: 138px;
+  }
+
+  .page-footer__logo-img {
+    height: 64px;
+  }
+
+  .page-footer__subscribe {
+    margin-bottom: 0;
+    padding: 24px;
+  }
+
+  .page-footer__partner {
+    margin: 16px 0;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .page-footer__about {
+    display: flex;
+  }
+
+  .page-footer__label {
+    margin-right: 24px;
+  }
+
+  .page-footer__link {
+    transition: all 0.3s;
+
+    &:hover {
+      color: $gold;
+    }
+  }
+
+  .page-footer__social-label {
+    display: block;
+    margin-right: 8px;
+  }
+}

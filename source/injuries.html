@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Травмы: RealMadrid.ru</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+
+  <link rel="preload" href="fonts/helveticaneue-light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/helveticaneue-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/helveticaneue-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotocondensed-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/hala-madrid.woff2" as="font" crossorigin="anonymous">
+
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple.png">
+
+  <script src="js/picturefill.min.js"></script>
+
+</head>
+
+<body>
+
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header__container container">
+      <div class="page-header__wrap">
+        <div class="page-header__logo-wrap">
+          <a href="/" class="page-header__logo">
+            <img class="page-header__logo-img" src="img/logo.svg" alt="Логотип сайта RealMadrid.ru">
+          </a>
+          <div class="page-header__logo-text">Hala Madrid!</div>
+        </div>
+        <div class="page-header__content">
+          <div class="page-header__top">
+            <div class="trophies page-header__trophies">
+              <ul class="trophies__mini-list trophies__mini-list--header">
+                <li class="trophies__mini-item">
+                  <div class="trophies__mini-wrap">
+                    <div class="trophies__qty">13</div>
+                    <div class="trophies__mini-name-wrap">
+                      <svg class="trophies__icon" viewBox="0 0 32 32">
+                        <use xlink:href="#icon-cl--white"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </li>
+                <li class="trophies__mini-item">
+                  <div class="trophies__mini-wrap">
+                    <div class="trophies__qty">13</div>
+                    <div class="trophies__mini-name-wrap">
+                      <svg class="trophies__icon" viewBox="0 0 32 32">
+                        <use xlink:href="#icon-cl--white"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </li>
+                <li class="trophies__mini-item">
+                  <div class="trophies__mini-wrap">
+                    <div class="trophies__qty">13</div>
+                    <div class="trophies__mini-name-wrap">
+                      <svg class="trophies__icon" viewBox="0 0 32 32">
+                        <use xlink:href="#icon-cl--white"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </li>
+                <li class="trophies__mini-item">
+                  <div class="trophies__mini-wrap">
+                    <div class="trophies__qty">13</div>
+                    <div class="trophies__mini-name-wrap">
+                      <svg class="trophies__icon" viewBox="0 0 32 32">
+                        <use xlink:href="#icon-cl--white"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </li>
+                <li class="trophies__mini-item">
+                  <div class="trophies__mini-wrap">
+                    <div class="trophies__qty">13</div>
+                    <div class="trophies__mini-name-wrap">
+                      <svg class="trophies__icon" viewBox="0 0 32 32">
+                        <use xlink:href="#icon-cl--white"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="page-header__search-wrap page-header__search-wrap--pc">
+              <form action="" class="form page-header__search">
+                <input type="search" class="form__search page-header__search-input" placeholder="Поиск по сайту...">
+                <button type="submit" class="page-header__search-btn"></button>
+              </form>
+            </div>
+          </div>
+          <nav class="main-nav">
+            <div class="main-nav__wrap">
+              <div class="page-header__search-wrap page-header__search-wrap--mobile">
+                <form action="" class="form page-header__search">
+                  <input type="search" class="form__search page-header__search-input" placeholder="Поиск по сайту...">
+                  <button type="submit" class="page-header__search-btn"></button>
+                </form>
+              </div>
+              <ul class="site-list">
+                <li class="site-list__item">
+                  <a href="" class="site-list__link">Новости</a>
+                </li>
+                <li class="site-list__item site-list__item--submenu">
+                  <div class="site-list__link">Команда</div>
+                  <button class="site-list__toggle"></button>
+                  <ul class="site-list__submenu">
+                    <li class="site-list__item">
+                      <a href="" class="site-list__link site-list__link--submenu">Основной состав</a>
+                    </li>
+                    <li class="site-list__item">
+                      <a href="" class="site-list__link site-list__link--submenu">Кастилья</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="site-list__item site-list__item--submenu">
+                  <div class="site-list__link">Клуб</div>
+                  <button class="site-list__toggle"></button>
+                  <ul class="site-list__submenu">
+                    <li class="site-list__item">
+                      <a href="" class="site-list__link site-list__link--submenu">Трофеи</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="site-list__item site-list__item--submenu">
+                  <div class="site-list__link">Сезон</div>
+                  <button class="site-list__toggle"></button>
+                  <ul class="site-list__submenu">
+                    <li class="site-list__item">
+                      <a href="" class="site-list__link site-list__link--submenu">Календарь</a>
+                    </li>
+                    <li class="site-list__item">
+                      <a href="" class="site-list__link site-list__link--submenu">Таблица лиги</a>
+                    </li>
+                    <li class="site-list__item">
+                      <a href="" class="site-list__link site-list__link--submenu">Бомбардиры</a>
+                    </li>
+                    <li class="site-list__item">
+                      <a href="" class="site-list__link site-list__link--submenu">Травмы</a>
+                    </li>
+                    <li class="site-list__item">
+                      <a href="" class="site-list__link site-list__link--submenu">Статистика</a>
+                    </li>
+                    <li class="site-list__item">
+                      <a href="" class="site-list__link site-list__link--submenu">Архив</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="site-list__item">
+                  <a href="" class="site-list__link">Форум</a>
+                </li>
+                <li class="site-list__item site-list__item--submenu">
+                  <div class="site-list__link">Fondo Ruso</div>
+                  <button class="site-list__toggle"></button>
+                  <ul class="site-list__submenu">
+                    <li class="site-list__item">
+                      <a href="" class="site-list__link site-list__link--submenu">О фан-клубе</a>
+                    </li>
+                    <li class="site-list__item">
+                      <a href="" class="site-list__link site-list__link--submenu">Преимущества</a>
+                    </li>
+                    <li class="site-list__item">
+                      <a href="" class="site-list__link site-list__link--submenu">Правила вступления</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="site-list__item">
+                  <a href="" class="site-list__link">О сайте</a>
+                </li>
+              </ul>
+              <div class="main-nav__social social">
+                <ul class="social__list">
+                  <li class="social__item">
+                    <a href="" class="social__link">
+                      <svg class="social__icon" viewbox="0 0 32 32">
+                        <use xlink:href="#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="" class="social__link">
+                      <svg class="social__icon" viewbox="0 0 32 32">
+                        <use xlink:href="#icon-vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="" class="social__link">
+                      <svg class="social__icon" viewbox="0 0 32 32">
+                        <use xlink:href="#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="" class="social__link">
+                      <svg class="social__icon" viewbox="0 0 32 32">
+                        <use xlink:href="#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="main-nav__site">
+                ® 2001, RealMadrid.ru
+              </div>
+            </div>
+            <a href="#log-in" data-effect="mfp-move-horizontal" class="main-nav__profile popup--link">
+              <div class="main-nav__name">dsgnr</div>
+              <div class="main-nav__profile-img">
+                <svg class="" viewBox="0 0 64 64">
+                  <use xlink:href="#icon-profile"></use>
+                </svg>
+                <div class="main-nav__avatar-wrap">
+                  <img data-src="img/profile/avatar.jpg" alt="Аватар пользователя *nickname* на сайте RealMadrid.ru" class="main-nav__avatar lazyload">
+                  <div class="main-nav__avatar-preview"></div>
+                </div>
+              </div>
+            </a>
+            <button class="main-nav__toggle"></button>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="container">
+      <div class="row">
+        <article class="col-lg-8">
+          <section class="page-main__section players">
+            <div class="topic">
+              <div class="topic__wrap">
+                <h1 class="heading heading--h1">Травмы</h1>
+                <div class="topic__add topic__add--wrap">
+                  <h2 class="heading heading--h2 heading--h2-inner">Основной состав</h2>
+                </div>
+              </div>
+            </div>
+            <ul class="players__list">
+              <li class="players__item">
+                <div class="players__wrap players__wrap--aside">
+                  <a href="" class="players__link">
+                    <div class="players__avatar">
+                      <img data-src="img/players/player-1.jpg" alt="Аватарка Марко Асенсио" class="players__item-img lazyload">
+                    </div>
+                    <div class="players__info-wrap">
+                      <div class="players__name-wrap">
+                        <div class="players__name">Карим Бензема</div>
+                        <div class="players__number">#20</div>
+                      </div>
+                      <div class="players__injury">Травма двуглавой мышцы левого бедра</div>
+                    </div>
+                  </a>
+                  <div class="players__birthday">
+                    <div class="players__birthday-day">19</div>
+                    <div class="players__birthday-month">сен</div>
+                  </div>
+                </div>
+              </li>
+              <li class="players__item">
+                <div class="players__wrap players__wrap--aside">
+                  <a href="" class="players__link">
+                    <div class="players__avatar">
+                      <img data-src="img/players/player-1.jpg" alt="Аватарка Марко Асенсио" class="players__item-img lazyload">
+                    </div>
+                    <div class="players__info-wrap">
+                      <div class="players__name-wrap">
+                        <div class="players__name">Карим Бензема</div>
+                        <div class="players__number">#20</div>
+                      </div>
+                      <div class="players__injury">Травма двуглавой мышцы левого бедра</div>
+                    </div>
+                  </a>
+                  <div class="players__birthday">
+                    <div class="players__birthday-day">6</div>
+                    <div class="players__birthday-month">фев</div>
+                  </div>
+                </div>
+              </li>
+              <li class="players__item">
+                <div class="players__wrap players__wrap--aside">
+                  <a href="" class="players__link">
+                    <div class="players__avatar">
+                      <img data-src="img/players/player-1.jpg" alt="Аватарка Марко Асенсио" class="players__item-img lazyload">
+                    </div>
+                    <div class="players__info-wrap">
+                      <div class="players__name-wrap">
+                        <div class="players__name">Карим Бензема</div>
+                        <div class="players__number">#20</div>
+                      </div>
+                      <div class="players__injury">Травма двуглавой мышцы левого бедра</div>
+                    </div>
+                  </a>
+                  <div class="players__birthday">
+                    <div class="players__birthday-day">24</div>
+                    <div class="players__birthday-month">мая</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
+        <aside class="sidebar sidebar--pc-only col-lg-4">
+          <section class="match page-main__section">
+            <div class="topic">
+              <h2 class="heading heading--h2 topic__heading">Прошедший матч</h2>
+              <a href="" class="button button--go">
+                <span class="button__go-text">Обсудить</span>
+              </a>
+            </div>
+            <div class="match__wrap">
+              <div class="match__result-wrap">
+                <div class="match__item">
+                  <div class="match__img-wrap">
+                    <img data-src="img/teams/team-1.svg" alt="Логотип клуба Real Madrid" class="match__item-img lazyload">
+                    <div class="match__item-preview"></div>
+                  </div>
+                  <div class="match__name">Реал Мадрид</div>
+                </div>
+                <div class="match__count-wrap">
+                  <div class="match__count match__count--home">2</div>
+                  <div class="match__count match__count--away">1</div>
+                </div>
+                <div class="match__item">
+                  <div class="match__img-wrap">
+                    <img data-src="img/teams/team-2.svg" alt="Логотип клуба Real Madrid" class="match__item-img lazyload">
+                    <div class="match__item-preview"></div>
+                  </div>
+                  <div class="match__name">Бавария</div>
+                </div>
+              </div>
+            </div>
+            <div class="match__info">La Liga, 19 мая, 22:45</div>
+          </section>
+          <section class="calendar page-main__section">
+            <div class="topic topic--margin">
+              <h2 class="heading heading--h2 topic__heading">Предстоящие матчи</h2>
+              <a href="" class="button button--go">
+                <span class="button__go-text">Календарь</span>
+              </a>
+            </div>
+            <ul class="calendar__list">
+              <li class="calendar__item">
+                <a href="" class="calendar__teams team">
+                  <div class="team__emblems">
+                    <div class="team__item">
+                      <div class="team__img-wrap">
+                        <img data-src="img/teams/team-1.svg" alt="Логотип клуба Real Madrid" class="team__item-img lazyload">
+                      </div>
+                    </div>
+                    <div class="team__item team__item--moved">
+                      <div class="team__img-wrap">
+                        <img data-src="img/teams/team-2.svg" alt="Логотип клуба Real Madrid" class="team__item-img lazyload">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team__labels">
+                    <div class="team__label team__label--real">Реал Мадрид</div>
+                    <div class="team__label">Бавария</div>
+                  </div>
+                </a>
+                <div class="calendar__info">
+                  <div class="calendar__time">22:45</div>
+                  <div class="calendar__date">19 сен</div>
+                </div>
+              </li>
+              <li class="calendar__item">
+                <a href="" class="calendar__teams team">
+                  <div class="team__emblems">
+                    <div class="team__item">
+                      <div class="team__img-wrap">
+                        <img data-src="img/teams/team-1.svg" alt="Логотип клуба Real Madrid" class="team__item-img lazyload">
+                      </div>
+                    </div>
+                    <div class="team__item team__item--moved">
+                      <div class="team__img-wrap">
+                        <img data-src="img/teams/team-2.svg" alt="Логотип клуба Real Madrid" class="team__item-img lazyload">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team__labels">
+                    <div class="team__label team__label--real">Реал Мадрид</div>
+                    <div class="team__label">Бавария</div>
+                  </div>
+                </a>
+                <div class="calendar__info">
+                  <div class="calendar__time">22:45</div>
+                  <div class="calendar__date">19 сен</div>
+                </div>
+              </li>
+              <li class="calendar__item">
+                <a href="" class="calendar__teams team">
+                  <div class="team__emblems">
+                    <div class="team__item">
+                      <div class="team__img-wrap">
+                        <img data-src="img/teams/team-1.svg" alt="Логотип клуба Real Madrid" class="team__item-img lazyload">
+                      </div>
+                    </div>
+                    <div class="team__item team__item--moved">
+                      <div class="team__img-wrap">
+                        <img data-src="img/teams/team-2.svg" alt="Логотип клуба Real Madrid" class="team__item-img lazyload">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="team__labels">
+                    <div class="team__label team__label--real">Реал Мадрид</div>
+                    <div class="team__label">Бавария</div>
+                  </div>
+                </a>
+                <div class="calendar__info">
+                  <div class="calendar__time">22:45</div>
+                  <div class="calendar__date">19 сен</div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="page-main__section">
+            <div class="topic topic--margin">
+              <h2 class="heading heading--h2 topic__heading">Таблица Ла-Лиги</h2>
+              <a href="" class="button button--go">
+                <span class="button__go-text">Полная таблица</span>
+              </a>
+            </div>
+            <table class="table table--league-aside">
+              <thead class="table__thead">
+                <tr class="table__tr-head">
+                  <th class="table__th"></th>
+                  <th class="table__th table__th--name">Команда</th>
+                  <th class="table__th">М</th>
+                  <th class="table__th">О</th>
+                </tr>
+              </thead>
+              <tbody class="table__tbody">
+                <tr class="table__tr">
+                  <td class="table__td">1.</td>
+                  <td class="table__td table__td--name table__td--leader">Реал Мадрид</td>
+                  <td class="table__td">22</td>
+                  <td class="table__td">120</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">2.</td>
+                  <td class="table__td table__td--name">Реал Мадрид</td>
+                  <td class="table__td">22</td>
+                  <td class="table__td">120</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">3.</td>
+                  <td class="table__td table__td--name">Реал Мадрид</td>
+                  <td class="table__td">22</td>
+                  <td class="table__td">120</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">4.</td>
+                  <td class="table__td table__td--name">Реал Мадрид</td>
+                  <td class="table__td">22</td>
+                  <td class="table__td">120</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">5.</td>
+                  <td class="table__td table__td--name">Реал Мадрид</td>
+                  <td class="table__td">22</td>
+                  <td class="table__td">120</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">6.</td>
+                  <td class="table__td table__td--name">Реал Мадрид</td>
+                  <td class="table__td">22</td>
+                  <td class="table__td">120</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="page-main__section">
+            <div class="topic topic--margin">
+              <h2 class="heading heading--h2 topic__heading">Бомбардиры</h2>
+              <a href="" class="button button--go">
+                <span class="button__go-text">Полная статистика</span>
+              </a>
+            </div>
+            <table class="table table--scorers-aside">
+              <thead class="table__thead">
+                <tr class="table__tr-head">
+                  <th class="table__th"></th>
+                  <th class="table__th table__th--name">Команда</th>
+                  <th class="table__th">Г</th>
+                  <th class="table__th">ГП</th>
+                </tr>
+              </thead>
+              <tbody class="table__tbody">
+                <tr class="table__tr">
+                  <td class="table__td">1.</td>
+                  <td class="table__td table__td--name">Эден Азар</td>
+                  <td class="table__td">22</td>
+                  <td class="table__td">12</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">2.</td>
+                  <td class="table__td table__td--name">Эден Азар</td>
+                  <td class="table__td">22</td>
+                  <td class="table__td">12</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">3.</td>
+                  <td class="table__td table__td--name">Эден Азар</td>
+                  <td class="table__td">22</td>
+                  <td class="table__td">12</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">4.</td>
+                  <td class="table__td table__td--name">Эден Азар</td>
+                  <td class="table__td">22</td>
+                  <td class="table__td">12</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">5.</td>
+                  <td class="table__td table__td--name">Эден Азар</td>
+                  <td class="table__td">22</td>
+                  <td class="table__td">12</td>
+                </tr>
+                <tr class="table__tr">
+                  <td class="table__td">6.</td>
+                  <td class="table__td table__td--name">Эден Азар</td>
+                  <td class="table__td">22</td>
+                  <td class="table__td">12</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section class="page-main__section players players--injury">
+            <div class="topic topic--margin">
+              <h2 class="heading heading--h2 topic__heading">Травмированные игроки</h2>
+              <a href="" class="button button--go">
+                <span class="button__go-text">Все травмы</span>
+              </a>
+            </div>
+            <ul class="players__list">
+              <li class="players__item">
+                <div class="players__wrap players__wrap--aside">
+                  <a href="" class="players__link">
+                    <div class="players__avatar">
+                      <img data-src="img/players/player-1.jpg" alt="Аватарка Марко Асенсио" class="players__item-img lazyload">
+                    </div>
+                    <div class="players__info-wrap">
+                      <div class="players__name-wrap">
+                        <div class="players__name">Карим Бензема</div>
+                        <div class="players__number">#20</div>
+                      </div>
+                      <div class="players__injury">Травма двуглавой мышцы левого бедра</div>
+                    </div>
+                  </a>
+                  <div class="players__birthday">
+                    <div class="players__birthday-day">19</div>
+                    <div class="players__birthday-month">сен</div>
+                  </div>
+                </div>
+              </li>
+              <li class="players__item">
+                <div class="players__wrap players__wrap--aside">
+                  <a href="" class="players__link">
+                    <div class="players__avatar">
+                      <img data-src="img/players/player-1.jpg" alt="Аватарка Марко Асенсио" class="players__item-img lazyload">
+                    </div>
+                    <div class="players__info-wrap">
+                      <div class="players__name-wrap">
+                        <div class="players__name">Карим Бензема</div>
+                        <div class="players__number">#20</div>
+                      </div>
+                      <div class="players__injury">Травма двуглавой мышцы левого бедра</div>
+                    </div>
+                  </a>
+                  <div class="players__birthday">
+                    <div class="players__birthday-day">19</div>
+                    <div class="players__birthday-month">сен</div>
+                  </div>
+                </div>
+              </li>
+              <li class="players__item">
+                <div class="players__wrap players__wrap--aside">
+                  <a href="" class="players__link">
+                    <div class="players__avatar">
+                      <img data-src="img/players/player-1.jpg" alt="Аватарка Марко Асенсио" class="players__item-img lazyload">
+                    </div>
+                    <div class="players__info-wrap">
+                      <div class="players__name-wrap">
+                        <div class="players__name">Карим Бензема</div>
+                        <div class="players__number">#20</div>
+                      </div>
+                      <div class="players__injury">Травма двуглавой мышцы левого бедра</div>
+                    </div>
+                  </a>
+                  <div class="players__birthday">
+                    <div class="players__birthday-day">19</div>
+                    <div class="players__birthday-month">сен</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="page-main__section players players--birthday">
+            <div class="topic topic--margin">
+              <h2 class="heading heading--h2 topic__heading">Дни рождения</h2>
+              <a href="" class="button button--go">
+                <span class="button__go-text">Все травмы</span>
+              </a>
+            </div>
+            <ul class="players__list">
+              <li class="players__item">
+                <div class="players__wrap players__wrap--aside">
+                  <a href="" class="players__link">
+                    <div class="players__avatar">
+                      <img data-src="img/players/player-1.jpg" alt="Аватарка Марко Асенсио" class="players__item-img lazyload">
+                    </div>
+                    <div class="players__info-wrap">
+                      <div class="players__name">Марко Асенсио</div>
+                      <div class="players__years"><span>Исполнится</span> 33 года</div>
+                    </div>
+                  </a>
+                  <div class="players__birthday">
+                    <div class="players__birthday-day">19</div>
+                    <div class="players__birthday-month">сен</div>
+                  </div>
+                </div>
+              </li>
+              <li class="players__item">
+                <div class="players__wrap players__wrap--aside">
+                  <a href="" class="players__link">
+                    <div class="players__avatar">
+                      <img data-src="img/players/player-1.jpg" alt="Аватарка Марко Асенсио" class="players__item-img lazyload">
+                    </div>
+                    <div class="players__info-wrap">
+                      <div class="players__name">Марко Асенсио</div>
+                      <div class="players__years"><span>Исполнится</span> 24 года</div>
+                    </div>
+                  </a>
+                  <div class="players__birthday">
+                    <div class="players__birthday-day">6</div>
+                    <div class="players__birthday-month">фев</div>
+                  </div>
+                </div>
+              </li>
+              <li class="players__item">
+                <div class="players__wrap players__wrap--aside">
+                  <a href="" class="players__link">
+                    <div class="players__avatar">
+                      <img data-src="img/players/player-1.jpg" alt="Аватарка Марко Асенсио" class="players__item-img lazyload">
+                    </div>
+                    <div class="players__info-wrap">
+                      <div class="players__name">Марко Асенсио</div>
+                      <div class="players__years"><span>Исполнится</span> 26 лет</div>
+                    </div>
+                  </a>
+                  <div class="players__birthday">
+                    <div class="players__birthday-day">24</div>
+                    <div class="players__birthday-month">мая</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="page-main__section instagram players--instagram">
+            <div class="topic">
+              <h2 class="heading heading--h2 topic__heading">Инстраграм Fondo Ruso</h2>
+              <a href="" class="instagram__link">
+                <svg class="instagram__icon-link" viewbox="0 0 32 32">
+                  <use xlink:href="#icon-social"></use>
+                </svg>
+              </a>
+            </div>
+            <ul class="instagram__list">
+              <li class="instagram__item">
+                <img src="img/instagram/instagram-1.png" alt="" class="instagram__img lazyload">
+                <div class="instagram__preview"></div>
+              </li>
+              <li class="instagram__item">
+                <img src="img/instagram/instagram-1.png" alt="" class="instagram__img lazyload">
+                <div class="instagram__preview"></div>
+              </li>
+              <li class="instagram__item">
+                <img src="img/instagram/instagram-1.png" alt="" class="instagram__img lazyload">
+                <div class="instagram__preview"></div>
+              </li>
+              <li class="instagram__item">
+                <img src="img/instagram/instagram-1.png" alt="" class="instagram__img lazyload">
+                <div class="instagram__preview"></div>
+              </li>
+              <li class="instagram__item">
+                <img src="img/instagram/instagram-1.png" alt="" class="instagram__img lazyload">
+                <div class="instagram__preview"></div>
+              </li>
+              <li class="instagram__item">
+                <img src="img/instagram/instagram-1.png" alt="" class="instagram__img lazyload">
+                <div class="instagram__preview"></div>
+              </li>
+              <li class="instagram__item">
+                <img src="img/instagram/instagram-1.png" alt="" class="instagram__img lazyload">
+                <div class="instagram__preview"></div>
+              </li>
+              <li class="instagram__item">
+                <img src="img/instagram/instagram-1.png" alt="" class="instagram__img lazyload">
+                <div class="instagram__preview"></div>
+              </li>
+              <li class="instagram__item">
+                <img src="img/instagram/instagram-1.png" alt="" class="instagram__img lazyload">
+                <div class="instagram__preview"></div>
+              </li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="page-footer__logo col-lg-3">
+          <div class="page-footer__logo-wrap">
+            <img class="page-footer__logo-img" src="img/black-emblem.svg" alt="">
+            <img class="page-footer__logo-img page-footer__logo-img--colored" src="img/color-emblem.svg" alt="">
+          </div>
+        </div>
+        <div class="page-footer__content col-lg-9">
+          <div class="page-footer__top">
+            <div class="page-footer__subscribe">
+              <div class="page-footer__subscribe-label">
+                Узнай первым о просмотрах:
+              </div>
+              <form action="" class="form">
+                <label for="email" class="form__label">
+                  <input type="text" name="email" id="email" class="form__input">
+                  <span class="form__label-text">E-mail</span>
+                  <div class="form__valid-mark"></div>
+                </label>
+                <div class="page-main__btn-wrapper">
+                  <button type="submit" class="button button--yellow button--large">Подписаться на рассылку</button>
+                </div>
+              </form>
+            </div>
+            <div class="page-footer__logos">
+              <a href="/" class="page-footer__partner">
+                <img class="page-footer__partner-img" src="img/fondo-ruso/logo-1xbet.svg" alt="Логотип сайта RealMadrid.ru">
+              </a>
+              <a href="/" class="page-footer__partner">
+                <img class="page-footer__partner-img page-footer__partner-img--fondo" src="img/fondo-ruso/logo-fr.svg" alt="Логотип сайта RealMadrid.ru">
+              </a>
+              <a href="/" class="page-footer__partner">
+                <img class="page-footer__partner-img" src="img/fondo-ruso/logo-hala.svg" alt="Логотип сайта RealMadrid.ru">
+              </a>
+            </div>
+          </div>
+          <div class="page-footer__bottom">
+            <div class="page-footer__social">
+              <div class="page-footer__social-label">
+                RealMadrid.ru в социальных сетях:
+              </div>
+              <ul class="social__list">
+                <li class="social__item">
+                  <a href="" class="social__link">
+                    <svg class="social__icon" viewbox="0 0 32 32">
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="" class="social__link">
+                    <svg class="social__icon" viewbox="0 0 32 32">
+                      <use xlink:href="#icon-vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="" class="social__link">
+                    <svg class="social__icon" viewbox="0 0 32 32">
+                      <use xlink:href="#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="" class="social__link">
+                    <svg class="social__icon" viewbox="0 0 32 32">
+                      <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__about">
+              <div class="page-footer__label">
+                © RealMadrid.ru, 2003 - 2019
+              </div>
+              <div class="page-footer__coded">
+                Designed by ...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/lazysizes.min.js" async=""></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

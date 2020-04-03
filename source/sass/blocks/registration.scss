@@ -1,0 +1,17 @@
+.registration {
+  padding-bottom: 48px;
+}
+
+.registration__form {
+  margin: auto;
+}
+
+.registration__heading {
+  text-align: center;
+}
+.registration__rules {
+  padding: 16px;
+  border: 1px solid $light-grey;
+  margin-bottom: 32px;
+}
+@media (min-width: $tablet-width) {}

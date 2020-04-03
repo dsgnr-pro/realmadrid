@@ -1,0 +1,160 @@
+.profile__img-wrap {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+.profile__img {
+  object-fit: cover;
+  height: auto;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  transition: all 0.3s;
+  height: 100%;
+  width: 100%;
+  object-position: top;
+  border-radius: 50%;
+}
+
+.profile__no-dialogs {
+  padding: 16px;
+  background-color: $light-grey;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.profile__img-preview {
+  @include lazy-animation;
+  padding-bottom: 100%;
+  border-radius: 50%;
+}
+
+.profile__nickname {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+.profile__avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile__details-list {
+  @include list-reset;
+  margin-bottom: 16px;
+}
+
+.profile__details-item {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &:not(:last-child) {
+    border-bottom: 2px solid $light-grey;
+  }
+}
+
+.profile__toggle {
+  margin-bottom: 48px;
+}
+
+.profile__fondo-ruso {
+  margin-left: 8px;
+  height: auto;
+}
+
+.profile__baige {
+  width: 16px;
+  height: 16px;
+}
+
+.profile__nickname-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.profile__cite-text {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.profile__blockquote {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    background-image: url("../img/icon-quote--red.svg");
+    opacity: 0.1;
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.profile__contact {
+  border-top: 2px solid $light-grey;
+  margin-top: 24px;
+  padding-top: 16px;
+}
+
+.profile__watch {
+  margin: 0 -32px;
+}
+
+.profile__exit {
+  width: 42px;
+  height: 42px;
+  background-color: $gold;
+  border: none;
+  border-radius: 50%;
+  background-image: url("../img/icon-logout.svg");
+  background-position: 55% center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.profile__edit {
+  margin-right: 16px;
+}
+
+.profile__btns {
+  display: flex;
+}
+
+.profile__watch .calendar__item:last-child {
+  border-bottom: 0px;
+}
+
+.profile__contact {
+  padding-bottom: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .profile__person {
+    width: 50%;
+  }
+  .profile__info {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px;
+  }
+  .profile__details {
+    width: 50%;
+  }
+}

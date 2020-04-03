@@ -1,0 +1,60 @@
+.team {
+  display: flex;
+  align-items: center;
+}
+
+.team__item {
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  box-shadow: 1px 5px 16px -9px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 25;
+  transition: all 0.3s;
+}
+
+.team__item-img {
+  height: 26px;
+}
+
+.team__img-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.team__item--moved {
+  margin-left: -8px;
+  z-index: 0;
+}
+
+.team__emblems {
+  display: flex;
+}
+
+.team__labels {
+  margin-left: 16px;
+}
+
+.team__label--real {
+  font-weight: 600;
+}
+
+.team__labels .team__label:first-child {
+  margin-bottom: 4px;
+}
+
+.team__label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 140px;
+}
+
+@media (max-width: $iphone-five-only) {
+  .team__labels {
+    margin-left: 8px;
+  }
+}

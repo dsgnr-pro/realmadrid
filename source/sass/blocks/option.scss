@@ -1,0 +1,6 @@
+.option {
+  @include a-reset;
+  padding: 8px 16px;
+  border: 2px solid $light-grey;
+  border-radius: 20px;
+}

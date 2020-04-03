@@ -1,0 +1,151 @@
+.squad__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.squad__item {
+  width: 50%;
+  margin-bottom: 16px;
+  border-bottom: 2px solid $light-grey;
+}
+
+.squad__link {
+  @include a-reset;
+  position: relative;
+  display: block;
+}
+
+.squad__info {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.squad__name {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: $gold;
+  font-size: 15px;
+}
+
+.squad__img-wrap {
+  flex-shrink: 0;
+  position: relative;
+}
+
+.squad__img {
+  object-fit: cover;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  height: auto;
+  width: 100%;
+}
+
+.squad__img-preview {
+  @include lazy-animation;
+  padding-bottom: 132%;
+}
+
+.squad__stat {
+  display: none;
+}
+
+.squad__number {
+  position: absolute;
+  left: 16px;
+  top: 8px;
+  z-index: 75;
+}
+
+.squad__img--hover {
+  display: none;
+}
+@media (min-width: $tablet-width) {
+  .squad__name {
+    font-size: 16px;
+  }
+
+  .squad__item {
+    width: 25%;
+  }
+}
+@media (min-width: $desktop-width) {
+  .squad__img {
+    object-position: center 15px;
+  }
+  .squad__stat {
+    display: block;
+    position: absolute;
+    padding: 16px 48px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    top: -48px;
+    left: -48px;
+    display: flex;
+    align-items: flex-end;
+    z-index: 25;
+    display: none;
+    box-shadow: 0 26px 50px -27px rgba(0, 0, 0, 0.12);
+  }
+
+  .squad__item {
+    z-index: 0;
+  }
+
+  .squad__stat .stat__list {
+    opacity: 0;
+    transition-duration: 0.3s;
+    transition-delay: 2s;
+  }
+
+  .squad__img-wrap {
+    z-index: 50;
+    overflow: hidden;
+  }
+
+  .squad__info {
+    z-index: 50;
+  }
+
+  .squad__img--hover {
+    height: 140%;
+    width: 140%;
+    margin-top: -16px;
+  }
+
+  .squad__item {
+    &:hover {
+      z-index: 25;
+    }
+
+    &:hover .squad__stat {
+      display: flex;
+      visibility: visible;
+      opacity: 1;
+      transition: 0.3s;
+    }
+
+    &:hover .squad__img--not-hover {
+      display: none;
+    }
+
+    &:hover .squad__img--hover {
+      display: block;
+    }
+
+    &:hover .stat__list {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

@@ -1,0 +1,127 @@
+.players__list {
+  @include list-reset;
+}
+
+.players__item {
+  @include border-bottom;
+}
+
+.players__wrap {
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.players__wrap--aside {
+  justify-content: space-between;
+}
+
+.players__link {
+  display: flex;
+  align-items: center;
+  @include a-reset;
+  max-width: 88%;
+
+  &:hover .players__avatar {
+    box-shadow: 1px 5px 16px -9px rgba(0,0,0,1);
+    transform: scale(1.05);
+  }
+}
+
+.players__avatar {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  box-shadow: 1px 5px 16px -9px rgba(0,0,0,.5);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.players__item-img {
+  border-radius: 50%;
+}
+
+.players__name {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.players__date {
+  margin-bottom: 8px;
+}
+
+.players__injury {
+  line-height: 1.4;
+  color: $grey;
+}
+
+.players__injury-arrow {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.players__injury-arrow--red {
+  background-image: url("../img/injuries/injury-arrow--red.svg");
+}
+
+.players__injury-arrow--green {
+  background-image: url("../img/injuries/injury-arrow--green.svg");
+}
+
+.players__injury-arrow--yellow {
+  background-image: url("../img/injuries/injury-arrow--yellow.svg");
+}
+
+.players__birthday {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.players__birthday-day {
+  font-size: 18px;
+  color: $gold;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.players__birthday-month {
+
+}
+
+.players__years {
+  color: $grey;
+}
+
+.players__name-wrap {
+  display: flex;
+}
+
+.players__number {
+  margin-left: 8px;
+}
+
+.players__position {
+  font-weight: 300;
+}
+
+.players__number {
+  color: $gold;
+}
+
+.players__position {
+  color: $grey;
+}
+
+.players__position--ondark {
+  color: white;
+}
+
+.players__number--ondark {
+  color: white;
+}

@@ -1,0 +1,32 @@
+@media (max-width: $mobile-width-only) {
+  .messages-col1 {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .messages-col2 {
+    margin-left: 0;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .list-group.usersList {
+
+  }
+
+  .panel-info > .panel-heading {
+    color: white;
+    background-color: $blue;
+  }
+
+  .list-group-item.active,
+  .list-group-item.active:focus,
+  .list-group-item.active:hover {
+    background-color: $blue;
+  }
+
+  .list-group-item > .badge {
+    margin-left: 12px;
+  }
+}

@@ -1,0 +1,56 @@
+.toggle__list {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.toggle__element {
+  @include a-reset;
+  font-size: 16px;
+  padding: 10px;
+  margin: 0 4px;
+  position: relative;
+}
+
+.toggle__qty {
+  position: absolute;
+  color: $gold;
+  font-weight: 600;
+  padding: 4px;
+  border-radius: 50%;
+  font-size: 12px;
+  right: -12px;
+  top: -6px;
+}
+
+.toggle__element--active {
+  color: $gold;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: $gold;
+  }
+}
+@media (max-width: $iphone-five-only) {
+  .toggle__element {
+    font-size: 12px;
+  }
+}
+@media (min-width: $tablet-width) {}
+@media (min-width: $desktop-width) {
+  .toggle__element {
+    transition: all 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $light-grey;
+    }
+  }
+}

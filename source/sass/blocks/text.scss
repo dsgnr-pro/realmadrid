@@ -1,0 +1,67 @@
+.text__ol,
+.text__ul {
+  list-style: none;
+  @include list-reset;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.text__p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.text__heading {
+  font-size: 18px;
+}
+
+.text__li {
+  padding-left: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.text__ul .text__li {
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 16px;
+    height: 8px;
+    width: 8px;
+    background-color: $blue;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+}
+
+.text__ol .text__li {
+  counter-increment: myCounter;
+
+  &::before {
+    display: block;
+    content: counter(myCounter);
+    width: 16px;
+    height: 16px;
+    border: 1px solid $blue;
+    color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 16px;
+    padding: 2px;
+    box-sizing: content-box;
+    top: 0;
+    position: relative;
+    font-size: 14px;
+  }
+}
+@media (min-width: $tablet-width) {
+  .text__container {
+    max-width: 560px;
+    margin: 24px auto;
+  }
+}

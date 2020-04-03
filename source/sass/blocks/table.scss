@@ -1,0 +1,106 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table__tbody {
+  width: 100%;
+}
+
+.table__tr {
+  width: 100%;
+}
+
+.table__td {
+  padding: 16px 8px;
+  text-align: center;
+  line-height: 1;
+}
+
+.table__th {
+  padding: 16px 8px;
+}
+
+.table__tr:nth-child(odd) {
+  background-color: $fade-blue;
+}
+
+.table__th--name {
+  text-align: left;
+  padding-left: 0;
+  width: 60%;
+  max-width: 60%;
+  min-width: 132px;
+}
+
+.table__td--name {
+  text-align: left;
+  padding-left: 0;
+  width: 60%;
+  max-width: 60%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 132px;
+}
+
+.table__td--leader {
+  font-weight: 600;
+}
+
+.table--full .table__th--name {
+  width: 30%;
+  max-width: 60%;
+}
+
+.table--full .table__td--name {
+  width: 30%;
+  max-width: 60%;
+}
+
+.table--league .table__tr--cl:nth-child(even) {
+  background-color: rgba(143, 255, 157, 0.2);
+}
+
+.table--league .table__tr--cl:nth-child(odd) {
+  background-color: rgba(143, 255, 157, 0.3);
+}
+
+.table--league .table__tr:nth-child(5) {
+  background-color: rgba(255, 234, 143, 0.3);
+}
+
+.table--league .table__tr:nth-child(6) {
+  background-color: rgba(255, 234, 143, 0.2);
+}
+
+.table--league .table__tr:nth-last-child(3) {
+  background-color: rgba(255, 150, 143, 0.3);
+}
+
+.table--league .table__tr:nth-last-child(2) {
+  background-color: rgba(255, 150, 143, 0.2);
+}
+
+.table--league .table__tr:last-child {
+  background-color: rgba(255, 150, 143, 0.3);
+}
+@media (min-width: $tablet-width) {
+  .table__td--name {
+    min-width: 180px;
+  }
+  .table__th--name {
+    min-width: 180px;
+  }
+}
+@media (min-width: $desktop-width) {
+  .table .table__tr {
+    &:hover {
+      background-color: $blue;
+    }
+
+    &:hover td {
+      color: white;
+    }
+  }
+}

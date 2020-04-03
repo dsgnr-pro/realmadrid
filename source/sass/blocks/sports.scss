@@ -1,0 +1,32 @@
+.sports__news {
+  @include list-reset;
+}
+
+.sports__news-item {
+  &:not(:last-child) {
+    border-bottom: 2px solid $light-grey;
+  }
+}
+
+.sports__time {
+  color: $grey;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.sports__news-link {
+  @include a-reset;
+  padding: 16px;
+  display: inline-block;
+  line-height: 1.5;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: $tablet-width) {
+
+}

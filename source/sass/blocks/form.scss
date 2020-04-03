@@ -1,0 +1,480 @@
+.form {
+  max-width: 384px;
+  margin: auto;
+}
+
+.form--wide {
+  max-width: 560px;
+}
+
+.form__textarea {
+  overflow: hidden;
+  background-color: $light-grey;
+  border-radius: 6px;
+  border: 0;
+  padding: 16px;
+  width: 100%;
+  margin-bottom: 16px;
+  transition: all 0.3s;
+  line-height: 1.5;
+  &:focus {
+    outline: none;
+    background-color: #e2ecf9;
+  }
+}
+
+.form--large {
+  background-color: white;
+}
+
+.form__info--city {
+  display: flex;
+  justify-content: center;
+  color: $black;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../img/icon-pin.svg");
+    width: 16px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 16px;
+  }
+}
+
+.form__info {
+  margin-bottom: 16px;
+  color: $grey;
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.5;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background-color: $grey;
+    position: absolute;
+    left: 8px;
+    top: 0;
+    transform: rotate(90deg);
+    transform-origin: left;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 1px;
+    left: 8px;
+    width: 8px;
+    top: 24px;
+    background-color: $grey;
+    position: absolute;
+    transform-origin: left;
+  }
+}
+
+.form__avatar-wrap {
+  display: flex;
+}
+
+.form__upload {
+  margin-bottom: 16px;
+}
+
+.form__avatar {
+  background-color: $light-grey;
+  background-image: url("../img/icon-profile--grey.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 16px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.form__avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-top: -2px;
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+  margin-bottom: 16px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.form__label-text {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgb(167, 167, 167);
+  transition: 0.3s;
+  position: absolute;
+  bottom: 28px;
+  font-size: 14px;
+  left: 24px;
+}
+
+.form__valid-mark {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  position: absolute;
+  background-image: url("../img/check.svg");
+  width: 16px;
+  height: 16px;
+  right: 24px;
+  bottom: 27px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.form__label--valid .form__valid-mark {
+  opacity: 1;
+  visibility: visible;
+}
+
+.form__input {
+  border: none;
+  background-color: $light-grey;
+  height: 72px;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s;
+  border-radius: 0;
+  padding-left: 24px;
+  padding-top: 24px;
+  border-radius: 6px;
+
+  &::-webkit-input-placeholder {
+    color: $black;
+  }
+
+  &:focus ~ .form__label-text {
+    transform: translateY(-16px);
+  }
+
+  &:hover {
+    background-color: #e2ecf9;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+//Select
+
+.form__label .select2 {
+  height: 72px;
+}
+
+.form__label .select2 .select2-selection .select2-selection__rendered {
+  height: 72px;
+  border: none;
+  background-color: $light-grey;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s;
+  border-radius: 0;
+  padding-left: 24px;
+  padding-top: 24px;
+  border-radius: 6px;
+  padding-left: 24px;
+}
+
+.form__label .select2 .select2-selection {
+  border: none;
+}
+
+.form__label .select2 .select2-selection .select2-selection__arrow {
+  top: 24px;
+  right: 24px;
+}
+//
+
+.form__input--select {
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  padding-top: 0;
+}
+
+.form__select-wrap {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("../img/icon-arrow--black.svg");
+    top: 32px;
+    right: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    opacity: 0.1;
+    transform: rotate(90deg);
+    transition: all 0.3s;
+  }
+
+  &:active::after {
+    transform: rotate(180deg);
+  }
+}
+
+.form__input--content ~ .form__label-text {
+  transform: translateY(-16px);
+}
+
+.form__label-text--textarea {
+  top: 28px;
+}
+
+.form__input--textarea {
+  -webkit-appearance: none;
+  min-height: 160px;
+  padding-top: 24px;
+
+  &::-webkit-input-placeholder {
+    font-weight: 400;
+    color: #a7a7a7;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    position: absolute;
+    bottom: 26px;
+    font-size: 14px;
+    left: 24px;
+  }
+}
+
+.form__select-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url("../img/form-arrow.svg");
+    width: 16px;
+    height: 8px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 24px;
+    bottom: 32px;
+  }
+}
+
+.form__select-wrap .form__label-text {
+  top: 8px;
+}
+
+.form__select {
+  border: none;
+  background-color: $light-grey;
+  height: 72px;
+  font-size: 16px;
+  width: 100%;
+  transition: all 0.3s;
+  padding-left: 0;
+  border-radius: 0;
+  padding-left: 24px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-size: 16px;
+  transition: all 0.3s;
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form__checkbox-text {
+  font-size: 14px;
+}
+
+.form__checkbox-wrap {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.form__btn-wrapper {
+  text-align: center;
+  max-width: 60%;
+  margin: 32px auto;
+}
+/* Customize the label (the form__checkbox) */
+.form__checkbox {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 32px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Hide the browser's default checkbox */
+.form__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.form__checkbox-mark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: $light-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* On mouse-over, add a grey background color */
+.form__checkbox:hover input ~ .form__checkbox-mark {
+  background-color: $grey;
+}
+/* When the checkbox is checked, add a blue background */
+.form__checkbox input:checked ~ .form__checkbox-mark {
+  background-color: $green;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.form__checkbox-mark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the checkmark when checked */
+.form__checkbox input:checked ~ .form__checkbox-mark::after {
+  display: block;
+}
+/* Style the checkmark/indicator */
+.form__checkbox .form__checkbox-mark::after {
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/icon-tip.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form__top {
+  background-color: $gold;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.form__range {
+  margin-bottom: 32px;
+}
+
+.form__range-label {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.form__label-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.form__range-number {
+  font-size: 16px;
+  color: $gold!important;
+  width: 24px;
+}
+
+.form__total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.form__total-sum {
+  font-size: 24px;
+  color: $gold;
+  font-weight: 600;
+}
+
+.form--large {
+  padding: 24px 0 16px;
+  margin-bottom: 16px;
+}
+
+.form__add {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__link {
+  @include a-reset;
+  color: $gold;
+}
+
+.form--login {
+  max-width: 480px;
+  background-color: white;
+  padding: 24px;
+  margin: auto;
+}
+
+.form__add {
+  margin-top: 32px;
+  justify-content: space-around;
+}
+
+.fondo-ruso__form-heading {
+  text-align: center;
+}
+@media (min-width: $tablet-width) {
+  .form--login {
+    margin: 64px auto;
+  }
+
+  .form__body {
+    max-width: 560px;
+    margin: auto;
+  }
+
+  .form--large .form__body {
+    padding-bottom: 24px;
+  }
+
+  .form__checkbox-wrap {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+}

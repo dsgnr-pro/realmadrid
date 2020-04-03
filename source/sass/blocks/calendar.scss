@@ -1,0 +1,342 @@
+.calendar__list {
+  @include list-reset;
+}
+
+.calendar__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 2px solid $light-grey;
+  position: relative;
+
+  &:hover .team__item {
+    box-shadow: 1px 5px 16px -9px #000;
+    transform: scale(1.05);
+  }
+}
+
+.calendar__watch {
+  @include a-reset;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s;
+  opacity: 0.5;
+  margin-left: auto;
+
+  &:hover {
+    background-color: $light-grey;
+    opacity: 0.8;
+  }
+}
+
+.calendar__watch-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.calendar__legenda {
+  padding-bottom: 4px;
+}
+
+.calendar__legenda-list {
+  @include list-reset;
+  padding: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+}
+
+.calendar__legenda-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+  width: 30%;
+}
+
+.calendar__legenda-item .stat {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.calendar__legenda-item .stat {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.calendar__info {
+  text-align: center;
+  width: 60px;
+}
+
+.calendar__dialog-btn {
+  margin: 0 8px;
+}
+
+.calendar__time {
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  color: $gold;
+}
+
+.calendar__date {
+  font-weight: 300;
+}
+
+.calendar__item {
+  flex-wrap: wrap;
+}
+
+.calendar__more-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar__stage-wrap {
+  text-align: center;
+}
+
+.calendar__stage {
+  margin-bottom: 4px;
+}
+
+.calendar__city {
+  font-weight: 300;
+}
+
+.calendar__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.calendar__icon-close {
+  width: 24px;
+  height: 24px;
+  background-color: $gold;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.calendar__score {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.calendar__tournament {
+  width: 24px;
+  height: 24px;
+}
+
+.calendar__tournament-title {
+  display: none;
+}
+
+.calendar__teams {
+  @include a-reset;
+  transition: all 0.3s;
+}
+
+.calendar__check {
+  width: 24px;
+  height: 24px;
+}
+
+.calendar__dialog {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: $blue;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar__dialog--hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.calendar__watch.calendar__tournament {
+  width: 40px;
+  height: 40px;
+}
+@media (max-width: $iphone-five-only) {
+  .calendar__item {
+    padding: 16px 8px;
+  }
+}
+@media (max-width: $mobile-width-only) {
+  .calendar__check--pc {
+    display: none;
+  }
+
+  .calendar__item {
+    position: relative;
+  }
+
+  .calendar__body .calendar__teams {
+    flex-grow: 1;
+  }
+
+  .calendar__item .more {
+    margin-left: 16px;
+  }
+
+  .calendar__city {
+    font-size: 12px;
+  }
+
+  .calendar__more {
+    width: 100%;
+    flex-grow: 1;
+    order: 2;
+    padding: 24px 16px 0;
+    display: none;
+  }
+}
+
+.calendar__discuss--tablet {
+  display: none;
+}
+
+.calendar__tournament-label {
+  position: absolute;
+  transition: 0.3s;
+  background-color: $gold;
+  white-space: nowrap;
+  border-radius: 10px;
+  padding: 6px;
+  color: #fff;
+  font-size: 12px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: -42px;
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $gold;
+    top: -5px;
+    left: calc(50% - 5px);
+  }
+}
+
+.calendar__item--head {
+  display: none;
+}
+
+.calendar__legenda--table-liga .calendar__legenda-item {
+  width: 45%;
+}
+@media (max-width: $iphone-five-only) {
+  .calendar__time {
+    font-size: 12px;
+  }
+
+  .calendar__date {
+    font-size: 12px;
+  }
+}
+@media (min-width: $tablet-width) {
+  .calendar__legenda-item {
+    width: 17%;
+  }
+
+  .calendar__legenda--table-liga .calendar__legenda-item {
+    width: 19%;
+  }
+
+  .calendar__discuss--mobile {
+    display: none;
+  }
+
+  .calendar__check--mobile {
+    display: none;
+  }
+
+  .calendar__item--head {
+    display: flex;
+  }
+
+  .calendar__item--head .calendar__content {
+    flex-grow: 1;
+  }
+
+  .calendar__discuss--tablet {
+    display: block;
+  }
+
+  .calendar__score {
+    width: 70px;
+    text-align: center;
+  }
+
+  .calendar__item .more {
+    display: none;
+  }
+
+  .calendar__more {
+    width: 280px;
+  }
+
+  .calendar__content--stat {
+    flex-grow: 1;
+  }
+
+  .calendar__teams {
+    width: 244px;
+    max-width: 244px;
+    margin-right: 16px;
+  }
+
+  .calendar__teams .players__link {
+    max-width: 100%;
+  }
+
+  .calendar__more .calendar__discuss {
+    display: none;
+  }
+
+  .calendar__tournament {
+    position: relative;
+
+    &:hover .calendar__tournament-label {
+      opacity: 1;
+      visibility: visible;
+      transition: 0.3s;
+      bottom: -36px;
+    }
+  }
+
+  .calendar__item {
+    flex-wrap: nowrap;
+  }
+}

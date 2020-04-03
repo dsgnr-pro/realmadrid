@@ -1,0 +1,260 @@
+.comments__item {
+  display: flex;
+}
+
+.comments__list {
+  @include list-reset;
+}
+
+.comments__avatar-wrap {
+  height: 48px;
+  width: 48px;
+  margin-right: 16px;
+  flex-shrink: 0;
+}
+
+.comments__avatar {
+  border-radius: 50%;
+  border: none;
+}
+
+.comments__date {
+  color: $grey;
+  margin-bottom: 8px;
+}
+
+.comments__body {
+  max-width: 100%;
+  margin-bottom: 16px;
+}
+
+.comments__name {
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.comments__name.ticket-comment-author {
+  margin-left: 0;
+  margin-bottom: 4px;
+}
+
+.comments__form {
+  margin-bottom: 32px;
+  display: flex;
+}
+
+.comments__form button {
+  width: 48px;
+  height: 48px;
+  margin-left: 16px;
+  font-size: 0px;
+
+  background-image: url("../img/send.svg");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  transition: all 0.3s;
+  box-shadow: 1px 5px 16px -9px rgba(0,0,0,.5);
+  background-color: white;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 1px 5px 16px -9px #000;
+    transform: scale(1.05);
+  }
+}
+
+.comments__section > .comments__list > .comments__item-wrap--discussion > .comments__list--inner {
+  padding-left: 40px;
+}
+
+.comments__section > .comments__list > .comments__item-wrap--discussion {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: calc(100% - 64px);
+    background-color: $light-grey;
+    position: absolute;
+    left: 23px;
+    top: 64px;
+    transition: all 0.3s;
+  }
+
+  &:hover::before {
+    background-color: rgba(212, 222, 255, 1);
+  }
+}
+
+.comments__item-wrap .comments__item-wrap {
+  &::before {
+    left: 63px;
+  }
+}
+
+.comments__text a {
+  color: $blue;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.comments__p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.comments__item {
+  margin-bottom: 24px;
+}
+
+.comments__name {
+  margin-bottom: 8px;
+  color: $blue;
+  line-height: 1.3;
+}
+
+.comments__respond {
+  @include a-reset;
+  color: $blue;
+  padding: 8px 12px;
+  background-color: rgba(125, 125, 125, 0.04);
+  border-radius: 24px;
+  transition: all 0.3s;
+  display: inline-block;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.comments__response-to-you {
+  font-weight: 400;
+  color: $black;
+}
+
+.comments__form.form {
+  max-width: 100%;
+}
+
+.comments__section {
+  margin: auto;
+}
+
+.comments__section .comments__form {
+  margin-left: 40px;
+}
+
+.comments--profile {
+  padding: 24px 0;
+}
+
+.comments__section {
+  margin-bottom: 32px;
+}
+
+.comments__dialog {
+  border: 1px solid $light-grey;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.comments__dialog-avatar {
+  display: flex;
+}
+
+.comments__dialog-topic {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: 12px;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.comments__dialog-topic span {
+  font-weight: 600;
+}
+
+.comments__back-wrap {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.comments__back {
+  transition: none;
+
+  &::after {
+    transform: rotate(90deg) translateX(-1px);
+  }
+
+  &:hover::after {
+    transform: rotate(90deg) translateX(-1px);
+  }
+}
+
+.comments__origin {
+  margin-top: 16px;
+}
+
+.comments__origin-text {
+  display: none;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  background-color: $light-grey;
+  margin-top: 8px;
+}
+
+.comments__origin-top {
+  font-size: 14px;
+  color: grey;
+}
+
+.comments__origin-expand {
+  color: $blue;
+  transition: all 0.3s;
+}
+
+.comments__origin-name {
+  color: $blue;
+}
+@media (max-width: $mobile-width-only) {
+  .comments__dialog {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: $tablet-width) {
+  .comments__dialog-topic {
+    max-width: 40%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .comments__section {
+    padding: 0 12px;
+  }
+
+  .comments__respond {}
+}
+@media (min-width: $desktop-width) {
+  .comments__origin-expand {
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+}

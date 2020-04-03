@@ -1,0 +1,213 @@
+.player__number {
+  font-size: 40px;
+}
+
+.player__top-info {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  z-index: 25;
+}
+
+.player__photo {
+  overflow: hidden;
+}
+
+.player__photo-wrap {
+  position: relative;
+}
+
+.player__img-wrap {
+  position: relative;
+}
+
+.player__img {
+  object-fit: cover;
+  height: auto;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  transition: all 0.3s;
+  height: 100%;
+  width: 100%;
+  object-position: top;
+}
+
+.player__img-preview {
+  padding-bottom: 150%;
+}
+
+.player__top {}
+
+.player__shirt {
+  display: none;
+}
+
+.player__text {
+  padding-bottom: 16px;
+}
+
+.player__specs-list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.player__specs-item {
+  width: 48%;
+  height: 88px;
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.player__specs-icon {
+  top: -9px;
+  right: -9px;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+}
+
+.player__specs-label {
+  color: $gold;
+  margin-bottom: 4px;
+}
+
+.player__specs-info {
+  margin-bottom: 8px;
+  margin-left: 16px;
+}
+
+.player__button {
+  bottom: 16px;
+  position: absolute;
+}
+
+.player__social {
+  padding-bottom: 16px;
+}
+
+.player__career {
+  padding-bottom: 16px;
+}
+
+.player__signature {
+  display: flex;
+  width: 120px;
+  margin: 16px auto 0;
+}
+
+.player__timeline {
+  margin-bottom: 32px;
+}
+
+.player__stat-wrap {
+  max-width: 400px;
+  margin: auto;
+}
+
+.player__media {
+  margin-bottom: 16px;
+}
+@media (min-width: $tablet-width) {
+  .player__stat-wrap {
+    display: flex;
+    max-width: none;
+    justify-content: space-evenly;
+    padding: 24px 0 48px;
+  }
+
+  .player__stat-group {
+    width: 320px;
+  }
+
+  .player__career-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 24px;
+  }
+
+  .player__shirt {
+    display: block;
+    width: 40%;
+  }
+
+  .player__number {
+    display: none;
+  }
+
+  .player__shirt-img-wrap {
+    position: relative;
+  }
+
+  .player__shirt-img {
+    object-fit: contain;
+    position: absolute;
+    left: 0;
+    background-color: white;
+    transition: all 0.3s;
+    height: 100%;
+    width: 100%;
+    object-position: top;
+    padding-top: 48px;
+  }
+
+  .player__shirt-img-preview {
+    padding-bottom: 150%;
+  }
+
+  .player__specs-info {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .player__specs-icon {
+    transition: all 0.3s;
+  }
+
+  .player__specs-item {
+    width: 23%;
+
+    &:hover .player__specs-icon {
+      transform: rotate(12deg) translate(8px, -8px);
+    }
+  }
+
+  .player__shirt-img {
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .player__img {
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .player__photo-wrap {
+    width: 40%;
+  }
+
+  .player__top {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 0;
+  }
+
+  .player__text .text__p {
+    margin: 16px;
+  }
+}

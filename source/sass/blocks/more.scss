@@ -1,0 +1,46 @@
+.more {
+  width: 24px;
+  height: 24px;
+  border: 1px solid $grey;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 12px;
+    background-color: $grey;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+    position: absolute;
+    transition: all 0.3s;
+  }
+}
+
+.more--active {
+  &::before {
+    transform: rotate(0deg);
+    transition: all 0.3s;
+  }
+}
+@media (max-width: $iphone-five-only) {
+  .more {
+    width: 16px;
+    height: 16px;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 8px;
+      background-color: $grey;
+    }
+  }
+}
