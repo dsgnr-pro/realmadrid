@@ -3233,7 +3233,8 @@ input[type="search"]::-webkit-search-results-decoration {
             transform: rotate(90deg) translateX(-1px); }
 
 .comments__origin {
-  margin-top: 16px; }
+  margin-top: 16px;
+  line-height: 1.5; }
 
 .comments__origin-text {
   display: none;
