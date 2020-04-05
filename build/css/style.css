@@ -1300,7 +1300,7 @@ input[type="search"]::-webkit-search-results-decoration {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 50%;
-  z-index: 25;
+  z-index: 1;
   -webkit-transition: all 0.3s;
   transition: all 0.3s; }
 
@@ -5253,7 +5253,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .page-footer {
   background-color: white;
   padding: 24px 0;
-  z-index: 50;
+  z-index: 1;
   position: relative; }
 
 .page-footer__btn {
@@ -5262,7 +5262,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .page-footer__label {
   text-align: center;
   color: #B9B9B9;
-  margin-bottom: 8px; }
+  margin-bottom: 16px; }
 
 .page-footer__bold-name {
   font-weight: 600; }
