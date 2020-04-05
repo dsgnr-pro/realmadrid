@@ -18,15 +18,12 @@ $(".comments__origin-expand").click(function () {
   $(this).parent().siblings('.comments__origin-text').slideToggle();
 });
 
-
 // Slider-Index
 
 $(".slider-index").slick({
   arrows: true,
   dots: true,
   rows: false,
-  autoplay: true,
-  autoplaySpeed: 7000,
   responsive: [{
     breakpoint: 768,
     settings: {
@@ -38,7 +35,6 @@ $(".slider-index").slick({
 //
 
 $('input[name="age"]').mask("99/99/9999");
-$('input[name="age_field"]').mask("99/99/9999");
 
 // Slider-Photos
 
@@ -108,3 +104,16 @@ $('.popup--link').magnificPopup({
   },
   midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
 });
+
+//Slider-News
+
+if (window.matchMedia("(min-width: 1199px)").matches) {
+  $(".news-similar__list").slick({
+    infinite: false,
+    arrows: true,
+    dots: false,
+    rows: false,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  });
+}
