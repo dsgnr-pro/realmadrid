@@ -25,24 +25,40 @@
 }
 
 .main-nav__profile {
+  position: relative;
+
   &:hover .main-nav__name {
     opacity: 0.5;
   }
 }
 
-.main-nav__profile--message {
-  &::after {
-    content: "";
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: $gold;
-    right: -8px;
-    top: -4px;
-  }
+.main-nav__notifications-count {
+  position: absolute;
+  background-color: rgb(223, 48, 48);
+  color: white;
+  right: -8px;
+  top: -4px;
+  border-radius: 40%;
+  padding: 3px 4px;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  min-width: 21px;
 }
+// 
+// .main-nav__profile--message {
+//   &::after {
+//     content: "";
+//     display: block;
+//     border-radius: 50%;
+//     position: absolute;
+//     width: 8px;
+//     height: 8px;
+//     background-color: $gold;
+//     right: -8px;
+//     top: -4px;
+//   }
+// }
 
 .main-nav__name {
   margin-right: 8px;
@@ -55,7 +71,6 @@
 
 .main-nav__profile-img img {
   border-radius: 50%;
-  display: none;
 }
 
 .main-nav__profile {

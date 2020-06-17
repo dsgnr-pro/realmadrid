@@ -50,6 +50,10 @@
   }
 }
 
+.info__comments-new {
+  margin-left: 4px;
+  color: rgba(41, 194, 129, 0.8);
+}
 @media (min-width: $tablet-width) {
   .info__item--comments {
     margin-left: auto;
