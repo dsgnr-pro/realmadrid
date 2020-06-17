@@ -19,3 +19,7 @@
 .lazyload--instant {
   transition: none;
 }
+
+img.lazyload:not([src]) {
+  visibility: hidden;
+}

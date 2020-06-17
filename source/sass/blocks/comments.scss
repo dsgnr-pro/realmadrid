@@ -47,8 +47,7 @@
   width: 48px;
   height: 48px;
   margin-left: 16px;
-  font-size: 0px;
-
+  font-size: 0;
   background-image: url("../img/send.svg");
   background-repeat: no-repeat;
   background-size: 40%;
@@ -110,6 +109,38 @@
 
 .comments__item {
   margin-bottom: 24px;
+}
+
+.comments__item--new {
+  position: relative;
+  
+  &::after {
+    content: "";
+    display: block;
+    background: $pink;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+  }
+}
+
+.comments__dialog--new-message {
+  position: relative;
+  
+  &::after {
+    content: "";
+    display: block;
+    background: $pink;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    border-radius: 50%;
+  }
 }
 
 .comments__name {
@@ -252,6 +283,66 @@
   .comments__respond {}
 }
 @media (min-width: $desktop-width) {
+  .comments__dialog .comments__avatar-wrap {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .comments__dialogs-block {
+    display: flex;
+  }
+
+  .comments__dialog .comments__name {
+    font-size: 14px;
+  }
+
+  .comments__dialog .comments__date {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  .comments__dialog {
+    border: none;
+    border-bottom: 1px solid $light-grey;
+    padding: 16px 12px;
+    margin-bottom: 0;
+  }
+
+  .comments__dialogs-wrap {
+    width: 30%;
+    flex-shrink: 0;
+    border-right: 1px solid $light-grey;
+    height: 660px;
+    overflow: scroll;
+    max-height: 660px;
+  }
+
+  .comments__dialogs-inner .comments__list {
+    height: 560px;
+    overflow: scroll;
+    max-height: 560px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid $light-grey;
+  }
+
+  .comments__dialogs-inner .comments__section {
+    padding: 16px;
+    margin-bottom: 0;
+  }
+
+  .comments__dialogs-inner .comments__form {
+    margin-left: 0;
+  }
+
+  .comments__dialogs-inner .comments__body {
+    margin-bottom: 0;
+  }
+
+  .comments__back-wrap {
+    display: none;
+  }
+
   .comments__origin-expand {
     &:hover {
       opacity: 0.5;

@@ -138,23 +138,56 @@
 }
 
 .profile__watch .calendar__item:last-child {
-  border-bottom: 0px;
+  border-bottom: 0;
 }
 
 .profile__contact {
   padding-bottom: 16px;
 }
-
 @media (min-width: $tablet-width) {
   .profile__person {
     width: 50%;
   }
+
   .profile__info {
     display: flex;
     justify-content: space-between;
     padding: 16px 32px;
   }
+
   .profile__details {
     width: 50%;
+  }
+}
+@media (min-width: $desktop-width) {
+  .profile__messages-block {
+    display: flex;
+  }
+
+  .profile__messages-top {
+    display: flex;
+        border-bottom: 1px solid $light-grey;
+  }
+
+  .profile__messages-search-wrap {
+    width: 30%;
+    flex-shrink: 0;
+  }
+
+  .profile__messages-head {
+    padding: 16px;
+    flex-grow: 1;
+  }
+
+  .profile__messages-search {
+    width: 100%;
+    border: none;
+    background-color: $fade-blue;
+    padding: 16px;
+    border-right: 1px solid $light-grey;
+
+    &::placeholder {
+      color: $black;
+    }
   }
 }

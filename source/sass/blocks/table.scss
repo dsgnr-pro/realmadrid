@@ -89,18 +89,34 @@
   .table__td--name {
     min-width: 180px;
   }
+
   .table__th--name {
     min-width: 180px;
   }
 }
 @media (min-width: $desktop-width) {
   .table .table__tr {
+    transition: all 0.1s;
+
     &:hover {
-      background-color: $blue;
+      background: $blue;
+      color: white;
+    }
+    
+    &:last-child td {
+      &:first-child {
+        border-bottom-left-radius: 8px;
+      }
+    }
+    
+    &:last-child td {
+      &:last-child {
+        border-bottom-right-radius: 8px;  
+      }
     }
 
     &:hover td {
-      color: white;
+
     }
   }
 }

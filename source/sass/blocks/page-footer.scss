@@ -137,6 +137,35 @@
   display: flex;
   justify-content: center;
 }
+
+.page-footer__logo {
+  position: relative;
+  background-color: $light-grey;
+  padding: 24px;
+  width: 100%;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-footer__link {
+  @include a-reset;
+  font-size: 16px;
+  margin-bottom: 16px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.page-footer__links-list {
+  @include list-reset;
+  position: relative;
+}
+
+.page-footer__logo-wrap {
+  margin-bottom: 40px;
+}
 @media (max-width: $tablet-width-only) {
   .page-footer__social {
     &:first-child {
@@ -153,20 +182,17 @@
     text-align: center;
   }
 
-  .page-footer__logo-wrap {
-    display: block;
-  }
-
-  .page-footer__links {
-    display: none;
-  }
-
   .page-footer__partner {
     width: 45%;
     padding: 16px;
   }
 }
 @media (min-width: $tablet-width) {
+  .page-footer__partner {
+    max-width: 20%;
+    width: auto;
+  }
+
   .page-footer__bottom {
     display: flex;
     align-items: center;
@@ -177,46 +203,21 @@
     margin-top: 16px;
   }
 
-  .page-footer__link {
-    @include a-reset;
-    font-size: 16px;
-    margin-bottom: 16px;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-  }
-
-  .page-footer__links-list {
-    @include list-reset;
-    position: relative;
-  }
-
-  .page-footer__partner {
-    max-width: 20%;
-    width: auto;
+  .page-footer__logo {
+    max-width: 384px;
+    margin: auto auto 16px;
   }
 }
 @media (min-width: $desktop-width) {
   .page-footer__logo {
-    position: relative;
-    background-color: $light-grey;
-    padding: 24px;
-    width: 100%;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: none;
+    margin: 0;
   }
-
   .page-footer__social {
     display: flex;
     align-items: center;
     border-top: none;
     border-bottom: none;
-  }
-
-  .page-footer__logo-wrap {
-    margin-bottom: 40px;
   }
 
   .page-footer__bottom {
@@ -234,7 +235,7 @@
     flex-direction: row;
     flex-grow: 1;
     justify-content: space-around;
-    margin-right: 32px;
+    // margin-right: 32px;
     height: 138px;
   }
 

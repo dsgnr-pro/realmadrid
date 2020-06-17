@@ -11,6 +11,12 @@
   z-index: 25;
 }
 
+.player__social-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .player__photo {
   overflow: hidden;
 }
@@ -116,6 +122,18 @@
 
 .player__media {
   margin-bottom: 16px;
+}
+
+.player__social {
+  padding: 32px 0;
+}
+@media (max-width: $mobile-width-only) {
+  .player__social-text {
+    margin-bottom: 24px;
+  }
+  .player__social-wrap {
+    flex-direction: column;
+  }
 }
 @media (min-width: $tablet-width) {
   .player__stat-wrap {
